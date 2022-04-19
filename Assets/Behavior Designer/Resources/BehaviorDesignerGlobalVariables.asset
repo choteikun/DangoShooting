@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mVariableData:
     variableStartIndex: 
-    JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"damageAmount","IsShared":true,"IsGlobal":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"BossHp","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u8840\u91cf","Int32mValue":100},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"takeDamage","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u53d7\u50b7","BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"BossShield","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u8b77\u7532\u503c(\u5982\u679c\u70ba0\uff0cOpen
-      Ass)","Int32mValue":0}]}'
+    JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"DamageAmount","IsShared":true,"IsGlobal":true,"SinglemValue":1},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"BossHp","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u8840\u91cf","Int32mValue":100},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"TakeDamage","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u53d7\u50b7","BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"BossShield","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u8b77\u7532\u503c(\u5982\u679c\u70ba0\uff0cOpen
+      Ass)","Int32mValue":0},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"BossActive","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u559a\u9192","BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"BossReady","IsShared":true,"IsGlobal":true,"Tooltip":"Boss\u662f\u5426\u5728\u6230\u9b25\u4f4d\u7f6e","BooleanmValue":false},{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"LookAtPlayer","IsShared":true,"IsGlobal":true,"BooleanmValue":false}]}'
     fieldSerializationData:
       typeName: []
       fieldNameHash: 

@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     {
         if (player.playerDead)
         {
-            audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Gameover"), 0.5f);
+            audioSource.PlayOneShot(Resources.Load<AudioClip>("Sounds/Gameover"), 0.2f);
         }
     }
 }

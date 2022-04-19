@@ -161,7 +161,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bullet" && meshRenderer.enabled == false)
+        if ((other.gameObject.tag == "Bullet" || other.gameObject.tag == "Boss") && meshRenderer.enabled == false)
         {
             playerHealth--;
             if (playerHealth <= 0 && !playerWin)

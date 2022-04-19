@@ -7,7 +7,7 @@ public class BossHPGauge : MonoBehaviour
 {
     public Slider slider1;
     public Slider slider2;
-    public Boss BossData;
+    public BossAss BossData;
 
     void Start()
     {
@@ -17,8 +17,8 @@ public class BossHPGauge : MonoBehaviour
 
     void Update()
     {
-        //slider1.value = BossData.GetHP() / 100;
+        slider1.value = BossData.GetHP() / 100;
 
-        //slider2.value = Mathf.Lerp(slider2.value, BossData.GetHP() / 100, Time.deltaTime * 10);
+        slider2.value = Mathf.Lerp(slider2.value, BossData.GetHP() / 100, Time.deltaTime * 10);
     }
 }

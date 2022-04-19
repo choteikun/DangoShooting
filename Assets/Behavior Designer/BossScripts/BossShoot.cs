@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class BossShoot : Action
 {
-    [SerializeField] GameObject bulletClone;
+    [SerializeField]private GameObject targetGameObject;
+    [SerializeField] GameObject Muzzle;
+    [SerializeField] GameObject TankBullet;
     public override void OnStart()
     {
-
+        NormalAtk(transform, 5);
     }
     public override TaskStatus OnUpdate()
     {
-        for (int i = 0; i <= 3; i++)
-        {
-            float splitAngle = 360 / 2;
-            PoolManager.Release(bulletClone, transform.position, Quaternion.Euler(0, 0, splitAngle * i));
-            //Instantiate(bulletClone, transform.position, Quaternion.Euler(0, 0, splitAngle * i));          
-        }
         return TaskStatus.Success;
+
+    }
+    public void NormalAtk(Transform boss, int NwayCount)
+    {
+        float r = Random.Range(1, NwayCount + 1);
+        float angle = -(NwayCount + 1) * 5 / 2 + r * 5;
+        PoolManager.Release(TankBullet, Muzzle.transform.position, Quaternion.Euler(new Vector3(90, 0, angle)));
     }
 }

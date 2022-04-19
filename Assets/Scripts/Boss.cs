@@ -18,8 +18,8 @@ public class Boss : MonoBehaviour
         takeDamage = false;
         bossShield = 0;
         //GlobalVariables.Instance.SetVariable("BossShield", (SharedInt)bossShield);
-        GlobalVariables.Instance.SetVariable("takeDamage", (SharedBool)takeDamage);
-        GlobalVariables.Instance.SetVariable("takeDamage", (SharedBool)true);
+        GlobalVariables.Instance.SetVariable("TakeDamage", (SharedBool)takeDamage);
+        GlobalVariables.Instance.SetVariable("TakeDamage", (SharedBool)true);
 
     }
 
@@ -34,7 +34,7 @@ public class Boss : MonoBehaviour
                 noDamage = false;
                 noDamageTime = 1200;    
             }
-        }
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,16 +42,17 @@ public class Boss : MonoBehaviour
         if (other.gameObject.tag == "Bullet" && !noDamage) 
         {
             bossShield--;
-            if (bossShield <= 0)
+            if (bossShield < 0)
             {
+                GlobalVariables.Instance.SetVariable("BossActive", (SharedBool)true);
                 Invoke("DelayShieldCharge", 3f);
                 noDamage = true;
             }
             
             GlobalVariables.Instance.SetVariable("BossShield", (SharedInt)bossShield);
             Debug.Log(GlobalVariables.Instance.GetVariable("BossShield"));
-            GlobalVariables.Instance.SetVariable("takeDamage", (SharedBool)true);
-            
+            GlobalVariables.Instance.SetVariable("TakeDamage", (SharedBool)true);
+
             //GlobalVariables.Instance.SetVariable("BossHp", (SharedInt)hp);
         }
         
@@ -65,4 +66,5 @@ public class Boss : MonoBehaviour
     //{
     //    return hp;
     //}
+
 }
