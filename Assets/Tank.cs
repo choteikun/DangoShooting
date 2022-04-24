@@ -138,7 +138,7 @@ public class Tank : MonoBehaviour
     }
     void UpdateDashAttack()
     {
-        if (getCurPosInfo)
+        if (getCurPosInfo)//暫存位置
         {
             curPlayerPos = player.transform.position;
             curBossPos = transform.position;
@@ -219,11 +219,11 @@ public class Tank : MonoBehaviour
             {
                 curState = BossState.OnFire;
             }
-            //else if (Probability(DashAtkPercent))
-            //{
-            //    getCurPosInfo = true;
-            //    curState = BossState.DashAttack;
-            //}
+            else if (Probability(DashAtkPercent))
+            {
+                getCurPosInfo = true;
+                curState = BossState.DashAttack;
+            }
         }
     }
     IEnumerator MoveToWallTop()

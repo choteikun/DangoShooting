@@ -30481,7 +30481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider1: {fileID: 6351221091999387733}
   slider2: {fileID: 6351221091911203034}
-  BossData: {fileID: 2952376953219821850}
+  BossData: {fileID: 1574716524}
 --- !u!223 &6351221091581766998
 Canvas:
   m_ObjectHideFlags: 0

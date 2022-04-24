@@ -7,7 +7,7 @@ public class BossHPGauge : MonoBehaviour
 {
     public Slider slider1;
     public Slider slider2;
-    public BossAss BossData;
+    public Tank BossData;
 
     void Start()
     {
