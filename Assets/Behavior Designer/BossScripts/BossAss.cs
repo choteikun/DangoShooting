@@ -40,7 +40,7 @@ public class BossAss : MonoBehaviour
             hp--;
             GlobalVariables.Instance.SetVariable("BossHp", (SharedInt)hp);
             GlobalVariables.Instance.SetVariable("TakeDamage", (SharedBool)true);
-            Debug.Log("BossHp: " + GlobalVariables.Instance.GetVariable("BossHp"));
+            //Debug.Log("BossHp: " + GlobalVariables.Instance.GetVariable("BossHp"));
             //Debug.Log(GlobalVariables.Instance.GetVariable("takeDamage"));
             //GlobalVariables.Instance.SetVariable("BossHp", (SharedInt)hp);
             //Debug.Log("000");

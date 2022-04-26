@@ -12,9 +12,10 @@ public class BossYowami : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (other.gameObject.tag == "Bullet" && boss.BossShield <= 0)
         {
             boss.BossHp--;
+            Debug.Log("BossHp : " + boss.BossHp);
         }
     }
 }
